@@ -10,4 +10,4 @@ Design-system work for rumoconsulting.com. Not a rebuild, an extraction: measuri
 
 **[check-rumo.py](check-rumo.py).** Python 3, standard library only. Runs against a deployed bundle and reports pass or fail against the palette, type scale, spacing scale, required states, contrast pairs, canvas colour constants, preserve list, architecture, and internal links. This is the file that turned out to matter more than the design system itself.
 
-Fuller writeup at [sonyabirch.com/library](https://sonyabirch.com/library).
+More on [sonyabirch.com](https://sonyabirch.com).

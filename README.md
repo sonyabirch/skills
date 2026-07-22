@@ -2,7 +2,7 @@
 
 Reusable text-format artefacts I use in my own work. Five [SKILL.md](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) files for Claude and Claude-compatible tools, plus a design-system extraction case study with the supporting script.
 
-Fuller writeups for each item live at [sonyabirch.com/library](https://sonyabirch.com/library), where the pieces get the story and voice a folder listing can't.
+The tools behind much of this are at [sonyabirch.com/projects](https://sonyabirch.com/projects/), with live demos.
 
 ## Skills
 
