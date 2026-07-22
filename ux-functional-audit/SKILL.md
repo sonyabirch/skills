@@ -21,6 +21,8 @@ The phrase that matters is *all* functions. You cannot check everything if you n
 
 **Map the surface before you judge it.** First enumerate what there is to check: every feature, every user goal, every flow, every screen or route, every interactive element, and every input. Build this from whatever you've been given (a spec, a set of screens, or by tracing the actual implementation with its handlers, routes, conditionals, and state in the code). When you have the code, read it for the functions and the states it does and doesn't handle. An unhandled branch is a finding before anyone has clicked anything. The map is the proof that the audit was complete, and it's the thing that surfaces the function nobody remembered to build.
 
+**Name your evidence before you trust it.** Every form the product reaches you in has a blind zone, and findings inherit it. A fetched page returns text, structure, and links, so anything carried inside an image (a date baked into a flyer tile, a price in a banner graphic) is invisible to you rather than absent from the page. Screenshots are the reverse: you get the pixels, but only for the states someone chose to capture, and nothing below the fold or behind an interaction exists in them. Code shows what was intended rather than what renders; a spec shows what was promised. So when something expected fails to turn up, ask which channel it would live in before you write the finding. If your evidence cannot carry that channel, the verdict is "unverifiable from what I have", it goes to *Needs a real check* with the request that settles it (a screenshot for image-borne content, a click-through for hidden states, the code for logic), and it never enters the findings as missing. One "missing" that turns out to have been merely invisible costs the report more trust than the rest of it earned.
+
 **Walk every flow end to end, as the user rather than as the author.** The author knows the happy path cold and walks it without thinking. Users don't. They arrive with the wrong model, mis-tap, hesitate, abandon halfway and come back, hit the browser back button, refresh mid-task, and lose signal. Walk each flow the way a real, distractible, error-prone person will, including the ways it isn't supposed to be used.
 
 **Verify every state, not just the full and happy one.** For each view, check the empty, loading, partial, success, error, and overflow states, plus offline, unauthenticated, permission-denied, and stale where they apply. A view that only holds up when it's full, fast, and online is not finished. This is where checking *all* functions earns its keep, because the missing states are almost never the ones the demo showed.
@@ -58,8 +60,9 @@ One or two lines: does the core experience work, and what is the single biggest 
 
 ## Coverage
 What you checked, meaning the flows, screens, states, and functions you enumerated
-and walked. This is how the user sees the audit was complete, and spots anything
-you couldn't reach.
+and walked, and the form of the product you worked from (live session, screenshots,
+fetched text, code), since that form decides what the audit could see at all. This
+is how the user sees the audit was complete, and spots anything you couldn't reach.
 
 ## Findings
 Grouped by flow (or by severity for a small surface). Each finding:
@@ -71,8 +74,9 @@ The paths that hold up. Briefly, so the user knows what not to touch.
 
 ## Needs a real check
 Anything you can't confirm from what you were given, meaning anything that needs a
-real device, a real screen reader, or a real user to settle. Honesty here beats a
-false all-clear.
+real device, a real screen reader, a real user, or a channel your evidence couldn't
+carry (a screenshot for image-borne content, a click-through for hidden states) to
+settle. Honesty here beats a false all-clear.
 ```
 
 Lead with the verdict and the blockers. Don't bury a broken core task under twelve polish notes. Be exhaustive in *coverage* but tight per finding, because a finding is a sharp line or two and a severity, not a paragraph.
@@ -84,6 +88,8 @@ Keep the report plain and declarative, one issue per line, and state the severit
 Critique the work rather than the person: "there's no error state on payment failure," never "you forgot the error state." Separate the rule from the preference and say which is which. "A declined card with no feedback looks like a broken app" is a problem; "I'd move the retry button" is a suggestion.
 
 Never rubber-stamp. "Seems to work" means you didn't check the empty state. If a flow genuinely holds up, say what holds and why, specifically.
+
+One standing rule of the prose itself: never an em dash, anywhere in what you write. A colon, a comma, parentheses, or a full stop always does the job, and the dash has become the signature tic of generated text, which is the last thing a senior voice should carry.
 
 ## Register: weak vs. strong
 

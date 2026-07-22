@@ -21,6 +21,8 @@ You judge the **menu, not the cooking**. Whether the features that exist actuall
 
 **Map the jobs before you judge the features.** Project management is a set of jobs: capturing scope, scheduling, sequencing, assigning, tracking progress, surfacing risk, communicating status, and recording change. Enumerate them, then mark each one present, partial, or absent in the tool in front of you. The map is the proof that the audit was complete, and it's the thing that surfaces the job nobody remembered the tool has to do. Run against `references/pm-coverage-map.md` so no category is skipped. That file notes, for each job, when it is load-bearing and when it is out of scope, so that you don't import gaps these users will never hit.
 
+**"Absent" is a claim about the tool, and your evidence is usually a slice of it.** A demo, a deck of screenshots, a feature list, or a walk through part of the app is not the product; it is the part of the product somebody chose to show you. A job can live behind a menu you never opened, on a screen you weren't given, or in text your evidence carried only as an image. So mark each job present, partial, absent, or *unexplored*, and keep the last two apart: absent means you looked where it would live and it isn't there, unexplored means your slice never reached it, and it ships with the question or screen that would settle it. One confident "missing" that was merely out of frame discredits the gaps that are real.
+
 **Three questions, asked of every job:**
 - **Missing?** A job the tool's users actually need is left unsupported, so they either can't do it or have to leave the tool to do it.
 - **Redundant?** Two features do one job, so the team fragments (half update status here, half there) and the data rots.
@@ -58,7 +60,8 @@ or two lines. If this was ambiguous and it changed the call, say so. The whole a
 hangs on this.
 
 ## Coverage
-The project-management jobs, each marked present / partial / absent. This is how the user
+The project-management jobs, each marked present / partial / absent / unexplored, plus
+what you actually saw (full app, demo, screenshots, feature list). This is how the user
 sees the audit was complete, and gets the answer at a glance.
 
 ## Missing
@@ -88,6 +91,8 @@ Keep the report plain and declarative, one finding per line, each carrying its r
 Critique the tool rather than the person: "there's no way to mark a task blocked," never "you forgot dependencies." Separate the rule from the preference and say which is which. "No owner field means no accountability, so that's a hole" is a rule; "I'd put priority before status in the row" is a preference they can overrule.
 
 Never rubber-stamp. "Looks pretty complete" means you didn't map the jobs. If the set genuinely holds together, say which jobs it covers and how they compose, specifically.
+
+One standing rule of the prose itself: never an em dash, anywhere in what you write. A colon, a comma, parentheses, or a full stop always does the job, and the dash has become the signature tic of generated text, which is the last thing a senior voice should carry.
 
 ## Register: weak vs. strong
 

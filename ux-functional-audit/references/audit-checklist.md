@@ -2,6 +2,17 @@
 
 The coverage scaffold for the ux-functional-audit skill. Run against it so no category is skipped. It is a checklist to guarantee coverage rather than a script to recite back, so report findings in the user's terms, with severity and the cost to the user, the way SKILL.md describes. Not every item applies to every product; skip what's irrelevant and say so rather than padding the report.
 
+## 0. Name your evidence first
+
+Findings inherit the limits of the form you were given, so state the form before auditing within it:
+- Fetched page / extracted text: images are opaque, so content baked into graphics (dates on flyer tiles, prices in banners) is invisible rather than absent. Layout, hover states, and anything rendered by script after load may be missing too.
+- Screenshots: pixels for the captured states and viewport only. Nothing below the fold, behind an interaction, or at another breakpoint exists in them.
+- Code: intent rather than render; what it declares and what the browser shows can differ.
+- Spec: promises rather than behaviour.
+- Live interactive session: the only form where "couldn't find it" comes close to "isn't there".
+
+Anything a form cannot carry goes to "Needs a real check" with the request that settles it, never into the findings as missing.
+
 ## 1. Map the surface first
 
 Before checking anything, enumerate it. You can't audit "all functions" without a list of them.
